@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Guincho Ribeirão - moto guincho e transporte de Motocicletas</title>
+
+    <link rel="icon" href="https://i.ibb.co/Chg4pg1/logo-site.png" type="image/x-icon">
+    <!-- Substitua "URL_DO_SEU_FAVICON" pelo URL do seu ícone de favicon -->
+
+    <!-- Adicione outras meta tags importantes para SEO aqui, como meta keywords, author, etc. -->
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Alterando a cor de fundo para branco */
+            color: #333; /* Cor do texto em contraste com o fundo */
+            background-image: url('https://i.ibb.co/wBJjW14/backgtound-site.png'); /* Substitua pelo caminho da sua imagem de fundo */
+            background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem no fundo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+            padding-bottom: 60px; /* Adicionando espaço na parte inferior para o footer */
+               
+               
+        }
+
+        header {
+
+            
+            background-color: #fff; /* Cor de fundo do cabeçalho */
+            padding: 0; /* Removendo o padding do cabeçalho */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Fixando o cabeçalho no topo */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            
+        }
+
+        
+
+        header .logo {
+            margin-left: 20px; /* Adicionando margem ao logotipo */
+        }
+
+        nav {
+            background-color: transparent; /* Tornando o fundo do menu de navegação transparente */
+            padding: 10px 20px; /* Adicionando preenchimento ao menu */
+            border-radius: 0 0 0 20px; /* Adicionando borda arredondada apenas ao canto inferior direito */
+        }
+
+        nav a {
+            color: #fff; /* Cor do texto do menu de navegação */
+            text-decoration: none;
+            margin: 0 10px; /* Reduzindo a margem entre os itens do menu */
+            font-size: 16px; /* Tamanho da fonte do menu */
+            transition: all 0.3s ease; /* Adiciona transição suave aos efeitos */
+            background-color: #000000; /* Cor de fundo dos botões do menu */
+            padding: 8px 15px; /* Adicionando preenchimento aos botões do menu */
+            border-radius: 20px; /* Adicionando borda arredondada aos botões do menu */
+        }
+
+        nav a:hover {
+            background-color: #847f7f; /* Altera a cor de fundo ao passar o mouse */
+        }
+
+        section {
+            padding: 20px; /* Aumentando o preenchimento para espaçamento interno nos conteúdos */
+            margin-top: 100px; /* Adicionando margem superior para compensar o cabeçalho fixo */
+        }
+
+        footer {
+            background-color: #000000; /* Cor de fundo do rodapé */
+            color: #fff; /* Cor do texto no rodapé */
+            padding: 2px;
+            text-align: center;
+            width: 100%;
+            position: fixed; /* Fixando o footer na parte inferior */
+            bottom: 0;
+            left: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Adiciona transição suave à cor de fundo */
+        }
+
+        .cta-button:hover {
+            background-color: #4a4f53; /* Altera a cor de fundo ao passar o mouse */
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 6px 8px; /* Reduzido o padding para diminuir o tamanho do botão */
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-size: 20px;
+            transition: transform 0.3s ease; /* Adiciona transição suave ao botão */
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+        }
+
+        img.logo {
+            max-width: 160px; /* Reduzido o tamanho máximo da logo do site canto superio esquerdo */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        
+
+        /* Estilo para os links dos serviços */
+        .servico a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .servico a:hover {
+            background-color: #000000;
+        }
+
+        /* Estilo para os serviços */
+        .servico {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .servico img {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .servico div {
+            flex-grow: 1;
+        }
+
+        .servico h2 {
+            margin-top: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://i.ibb.co/Chg4pg1/logo-site.png" alt="Logo da Empresa" class="logo"> <!-- Insira a URL da sua logo aqui -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#porque-escolher">Por que Escolher</a>
+            <a href="#area-cobertura">Área de Cobertura</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank"><img src="https://i.ibb.co/syg02vZ/1.png" alt=""></a>
+            <a href="https://www.facebook.com/ContatoDesktop/" target="_blank"><img src="https://i.ibb.co/XLPD5sx/2.png" alt=""></a>
+            <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank"><img src="https://i.ibb.co/94vX1Qx/3.png" alt=""></a>
+        </div>
+
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h1>Bem-vindo à Moto Guincho Riberão</h1>
+            <h2>Atendimento exclusivo em moto guincho e transporte de Motocicletas. Atuamos com socorro de motos em geral.</h2>
+            <h3>Em situações de emergência ou pane, nossa equipe de socorro está disponível 24 horas para atender chamados em Ribeirão Preto.</h3>
+            <p>Na <strong>Assistência Moto Guincho Ribeirão</strong>, a excelência é nossa marca registrada, garantindo que cada remoção seja feita com precisão e cuidado.</p>
+    <p>Nosso compromisso com a satisfação do cliente é inabalável. Na <strong>Assistência Moto Guincho Ribeirão</strong>, estamos sempre prontos para superar suas expectativas.</p>
+    <p>Contamos com uma equipe experiente e dedicada, pronta para lidar com qualquer situação de emergência. Sua segurança e tranquilidade são nossa prioridade.</p>
+    <p>Na <strong>Assistência Moto Guincho Ribeirão</strong>, entendemos a importância do tempo. Por isso, oferecemos um serviço ágil e eficiente, sem demoras desnecessárias.</p>
+    <p>Nossos preços competitivos combinados com a qualidade incomparável de nossos serviços tornam a <strong>Assistência Moto Guincho Ribeirão</strong> a escolha óbvia para suas necessidades de guincho.</p>
+    <p>Seja em uma emergência na estrada ou simplesmente movendo seu veículo de um local para outro, confie na <strong>Assistência Moto Guincho Ribeirão</strong> para fornecer soluções rápidas e confiáveis.</p>
+    
+    <a href="#servicos" class="cta-button">Conheça nossos serviços</a>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <h2>Serviços</h2>
+            <ul>
+                <li class="servico">
+                    <img src="https://i.ibb.co/Chg4pg1/logo-site.png" alt="Serviço 1"> <!-- Insira o caminho da imagem para o Serviço 1 -->
+                    <div>
+                        <h3>Serviço 1</h3>
+                        <p>Aqui você descreve o item que deseja exibir maores detalhes. Escreva o quanto achar Nescessario </p>
+                        <a href="#">Saiba mais</a> <!-- Insira o link para mais informações sobre o Serviço 1 -->
+                    </div>
+                </li>
+                <li class="servico">
+                    <img src="https://i.ibb.co/Chg4pg1/logo-site.png" alt="Serviço 2"> <!-- Insira o caminho da imagem para o Serviço 2 -->
+                    <div>
+                        <h3>Serviço 2</h3>
+                        <p>Aqui você descreve o item que deseja exibir maores detalhes. Escreva o quanto achar Nescessario.</p>
+                        <a href="#">Saiba mais</a> <!-- Insira o link para mais informações sobre o Serviço 2 -->
+                    </div>
+                </li>
+                <!-- Adicione mais serviços conforme necessário -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="porque-escolher">
+        <div class="container">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por que Escolher a Moto Guincho Ribeirão</title>
+
+        <h1><strong>Moto Guincho Ribeirão:</strong> A Escolha Ideal para Suas Necessidades de Moto Guincho</h1>
+        
+        <h2>Compromisso com a Eficiência e Qualidade</h2>
+        <p>A <em>Moto Guincho Ribeirão</em> orgulha-se de oferecer serviços de guincho de alta qualidade, entregando eficiência e confiabilidade em cada remoção de veículo. Nossa equipe altamente treinada e equipada com tecnologia de ponta está pronta para atender às suas necessidades com profissionalismo e rapidez.</p>
+        
+        <h2>Atendimento Personalizado e Ágil</h2>
+        <p>Aqui na <em>Moto Guincho Ribeirão</em>, valorizamos cada cliente e nos esforçamos para fornecer um atendimento personalizado e ágil. Entendemos a importância de cada chamada de emergência e garantimos uma resposta rápida e eficaz, 24 horas por dia, 7 dias por semana.</p>
+        
+        <h2>Preços Competitivos e Transparência</h2>
+        <p>Com a <em>Moto Guincho Ribeirão</em>, você pode contar com preços competitivos e transparência em cada transação. Não há surpresas ocultas ou taxas extras. Nosso objetivo é fornecer serviços de guincho acessíveis sem comprometer a qualidade, garantindo sua total satisfação.</p>
+    
+        <h2>Ao Escolher a Moto Guincho Ribeirão você têm a certeza de um atendimento rapido e de qualidade</h2>
+        <p>Na <strong>Moto Guincho Ribeirão</strong>, a excelência é nossa marca registrada, garantindo que cada remoção seja feita com precisão e cuidado.</p>
+        <p>Nosso compromisso com a satisfação do cliente é inabalável. Na <strong>Moto Guincho Ribeirão</strong>, estamos sempre prontos para superar suas expectativas.</p>
+        <p>Contamos com uma equipe experiente e dedicada, pronta para lidar com qualquer situação de emergência. Sua segurança e tranquilidade são nossa prioridade.</p>
+        <p>Na <strong>Moto Guincho Ribeirão</strong>, entendemos a importância do tempo. Por isso, oferecemos um serviço ágil e eficiente, sem demoras desnecessárias.</p>
+        <p>Nossos preços competitivos combinados com a qualidade incomparável de nossos serviços tornam a <strong>Moto Guincho Ribeirão</strong> a escolha óbvia para suas necessidades de guincho.</p>
+        <p>Seja em uma emergência na estrada ou simplesmente movendo seu veículo de um local para outro, confie na <strong>Moto Guincho Ribeirão</strong> para fornecer soluções rápidas e confiáveis.</p>
+        <p>Na <strong>Moto Guincho Ribeirão</strong>, valorizamos a transparência em todas as interações com nossos clientes. Nenhuma surpresa desagradável, apenas um serviço de guincho honesto e confiável.</p>
+        <p>Ao escolher a <strong>Moto Guincho Ribeirão</strong>, você está escolhendo mais do que apenas um serviço de guincho. Você está escolhendo tranquilidade, confiabilidade e profissionalismo em cada etapa do caminho.</p>
+    
+    </article>
+</body>
+</html>
+
+            <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Falar WhatsApp</a> <!-- Insira o link para mais informações -->
+        </div>
+    </section>
+
+             
+
+            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Cobertura</title>
+
+    <section id="area-cobertura">
+        <div class="container">
+            <h2>Área de Cobertura</h2>
+            <p>A Moto Guincho Ribeirão esta presente atendendo...</p>
+            
+            <div id="conteudoCidades">
+                <h1>Moto Guincho no Alto da Boa Vista, em Ribeirão Preto</h1>
+                <h2>Se você está procurando por Moto Guincho no Alto da Boa Vista em Ribeirão Preto, temos a solução para você!</h2>
+                <h3>No Alto da Boa Vista, a Moto Guincho Ribeirão se destaca por oferecer soluções rápidas em transporte e socorro de motos.</h3>
+                <h3>Confiabilidade agilidade em transporte de motocicletas na cidade.</h3>
+                <h3>Nossa equipe especializada está pronta para atender suas necessidades, proporcionando um transporte seguro e rápido para sua moto.</h3>
+
+
+            <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+                    <div id="conteudoCidades">
+                        <h1>Moto Guincho no Alto da Colina, em Ribeirão Preto</h1>
+                        <h2>Se você está procurando por Moto Guincho no Alto da Colina em Ribeirão Preto, temos a solução para você!</h2>
+                        <h3>No Alto da Colina, a Moto Guincho Ribeirão se destaca por oferecer soluções rápidas em transporte e socorro de motos.</h3>
+                        <h3>Confiabilidade agilidade em transporte de motocicletas na cidade.</h3>
+                        <h3>Nossa equipe especializada está pronta para atender suas necessidades, proporcionando um transporte seguro e rápido para sua moto.</h3>
+                    <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+
+
+                    <div id="conteudoCidades">
+                        <h1>moto guincho no Alto da Lapa, em Ribeirão Preto</h1>
+                        <h2>Se você está procurando por socorro de moto no Alto da Lapa em Ribeirão Preto, temos a solução para você!</h2>
+                        <h3>No Alto da Lapa, a moto guincho ribeirão se destaca por oferecer por oferecer não apenas reboque de motos, mas um serviço completo de transporte com qualidade e eficiência.</h3>
+                        <h3>Nosso portal proporciona uma maneira fácil e rápida de solicitar assistência para socorro, reboque e transporte de motocicletas.</h3>
+                        <h3>Confie na Moto Guincho Ribeirão Preto para cuidar da sua moto com profissionalismo e comprometimento.</h3>
+                    <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+
+
+                    <div id="conteudoCidades">
+                        <h1>moto guincho no Alto do Ipiranga, em Ribeirão Preto</h1>
+                        <h2>Se você está procurando por socorro de moto no Alto do Ipiranga em Ribeirão Preto, temos a solução para você!</h2>
+                        <h3>No Alto do Ipiranga, a moto guincho ribeirão se destaca por oferecer por oferecer não apenas reboque de motos, mas um serviço completo de transporte com qualidade e eficiência.</h3>
+                        <h3>Nosso portal proporciona uma maneira fácil e rápida de solicitar assistência para socorro, reboque e transporte de motocicletas.</h3>
+                        <h3>Confie na Moto Guincho Ribeirão Preto para cuidar da sua moto com profissionalismo e comprometimento.</h3>
+                    <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+
+
+                    <div id="conteudoCidades">
+                        <h1>moto guincho no Alto do Santana, em Ribeirão Preto</h1>
+                        <h2>Se você está procurando por socorro de moto no Alto do Santana em Ribeirão Preto, temos a solução para você!</h2>
+                        <h3>No Alto do Santana, a moto guincho ribeirão se destaca por oferecer por oferecer não apenas reboque de motos, mas um serviço completo de transporte com qualidade e eficiência.</h3>
+                        <h3>Nosso portal proporciona uma maneira fácil e rápida de solicitar assistência para socorro, reboque e transporte de motocicletas.</h3>
+                        <h3>Confie na Moto Guincho Ribeirão Preto para cuidar da sua moto com profissionalismo e comprometimento.</h3>
+                    <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+
+
+                    <div id="conteudoCidades">
+                        <h1>moto guincho no Alto do São Bento, em Ribeirão Preto</h1>
+                        <h2>Se você está procurando por socorro de moto no Alto do São Bento em Ribeirão Preto, temos a solução para você!</h2>
+                        <h3>No Alto do São Bento, a moto guincho ribeirão se destaca por oferecer por oferecer não apenas reboque de motos, mas um serviço completo de transporte com qualidade e eficiência.</h3>
+                        <h3>Nosso portal proporciona uma maneira fácil e rápida de solicitar assistência para socorro, reboque e transporte de motocicletas.</h3>
+                        <h3>Confie na Moto Guincho Ribeirão Preto para cuidar da sua moto com profissionalismo e comprometimento.</h3>
+                    <a href="https://api.whatsapp.com/send?phone=5511950266711" class="cta-button">Solicitar Moto Guincho</a></div>
+                                  
+            </div>                     
+                             
+             <!-- Adicione mais títulos e subtítulos conforme necessário -->
+
+
+    <style>
+        /* Estilo para o menu de capitais */
+        #menuCapitais {
+            list-style: none;
+            padding: 0;
+            max-height: 200px; /* Altura máxima do menu de capitais */
+            overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+        }
+        #menuCapitais li {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        /* Efeito de hover para os itens de capital */
+        #menuCapitais li:hover {
+            color: blue;
+        }
+        /* Estilo para o submenu de cidades */
+        .submenuCidades {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+            max-height: 200px; /* Altura máxima do submenu de cidades */
+            overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+        }
+        /* Estilo para os itens de cidade */
+        .submenuCidades li {
+            list-style-type: none;
+            margin: 5px 0;
+            cursor: pointer;
+            text-align: center; /* Centraliza o texto */
+        }
+        /* Efeito de hover para os itens de cidade */
+        .submenuCidades li:hover {
+            background-color: #f0f0f0;
+        }
+        /* Estilo para o conteúdo das cidades */
+        #conteudoCidades {
+            margin-top: 20px;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+        /* Estilo para os cabeçalhos */
+        h1, h2, h3 {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        /* Estilo para o botão CTA */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            animation: pulse 2s infinite; /* Animação pulsante */
+        }
+        /* Animação pulsante */
+
+
+		
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Estilo para o título SEO */
+        #tituloSEO {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Título da Área de Cobertura -->
+<h1 id="tituloSEO">Área de Cobertura</h1>
+
+<!-- Aqui vamos inserir o menu -->
+<ul id="menuCapitais"></ul>
+
+<!-- Aqui vamos exibir o conteúdo das cidades -->
+<div id="conteudoCidades"></div>
+
+<script>
+// Vamos criar um objeto que contenha as capitais e suas respectivas cidades
+const capitaisECidades = {
+    "Ribeirão Preto - SP": [
+        "Alto da Boa Vista", "Alto da Colina", "Alto da Lapa", "Alto do Ipiranga", "Alto do Santana", 
+        "Alto do São Bento", "Bonfim Paulista", "Campos Elíseos", "Centro", "City Ribeirão", 
+        "Condomínio Alphaville", "Condomínio Guaporé", "Condomínio Jardim Sul", "Iguatemi", 
+        "Jardim Aeroporto", "Jardim América", "Jardim Antártica", "Jardim Botânico", "Jardim Califórnia", 
+        "Jardim Canadá", "Jardim Castelo Branco", "Jardim das Palmeiras", "Jardim Diva Tarla de Carvalho", 
+        "Jardim do Trevo", "Jardim Dr. Paulo Gomes Romeo", "Jardim Florestan Fernandes", "Jardim Irajá", 
+        "Jardim Independência", "Jardim Interlagos", "Jardim José Sampaio Júnior", "Jardim Paulista", 
+        "Jardim Paulistano", "Parque dos Bandeirantes", "Vila Seixas", "Jardim Macedo", 
+        "Jardim Palma Travassos", "Castelo Branco I", "Castelo Branco II", "Presidente Medici", 
+        "Vila Santana", "Jardim Vista Alegre", "Lagoinha", "Distrito Industrial e Empresarial Lagoinha", 
+        "Nova Ribeirania (ou ribeiranea)", "Ribeirania", "Recreio das Acácias", "Jardim Manoel Penna", 
+        "Jardim Greenville", "Jardim Roberto Bennedetti", "São José", "Recreio Anhanguera", 
+        "Portal dos Ipês", "Recreio Internacional", "Parque dos Servidores", "Parque dos Lagos", 
+        "Parque Anhanguera", "Vila Abranches", "Parque São Sebastião", "Hípica", "Jardim Juliana", 
+        "Jardim Helena", "Vila Tibério", "Vila Lobato", "Vila Amélia", "Vila Monte Alegre", 
+        "Cidade Universitária", "Sumarezinho", "Jardim Paiva I", "Jardim Paiva II", 
+        "Jardim Arlindo Laguna", "Planalto Verde", "Portal do Alto", "Dom Bernado José Bueno Mielle", 
+        "Jardim Jovino Campos", "Parque das Andorinhas", "Jardim Eugênio Lopes", "Jardim Recreio", 
+        "Jardim Itaú", "Jardim Itaú Mirim", "Jardim Piratininga", "Vila Virgínia", "República", 
+        "Dom Manoel da Silveira D elboux", "Jardim Maria Goretti", "Jardim Centenário", 
+        "Jardim Bela Vista", "Solar Boa Vista", "Adão do Carmo Leonel", "Jardim Branca Sales", 
+        "Parque Ribeirão Preto", "Jardim Maria da Graça", "Jardim Progresso", "Jardim Marchesi", 
+        "Vila Guiomar", "Boulevard", "Higienópolis", "Santa Cruz", "Jardim Laranjeiras", 
+        "Jardim Florida", "Vila Ana Maria", "Jardim João Rossi", "Jardim Nova Aliança", 
+        "Jardim Nova Aliança Sul", "Jardim Santa Angela", "Jardim Itamarati", "Quinta da Alvorada", 
+        "Country Village"
+    ]
+};
+
+// Função para criar o menu de capitais
+function criarMenuCapitais() {
+    const menuCapitais = document.getElementById("menuCapitais");
+    
+    // Percorrendo o objeto de capitais e criando itens de lista para cada uma delas
+    for (const capital in capitaisECidades) {
+        const itemCapital = document.createElement("li");
+        itemCapital.textContent = capital;
+        
+        // Adicionando um evento de clique para exibir os bairros correspondentes
+        itemCapital.addEventListener("click", function() {
+            exibirBairros(capital);
+        });
+        
+        // Adicionando um evento de hover para destacar o item de capital
+        itemCapital.addEventListener("mouseenter", function() {
+            itemCapital.style.color = "blue";
+        });
+        itemCapital.addEventListener("mouseleave", function() {
+            itemCapital.style.color = "";
+        });
+        
+        // Adicionando o item de capital ao menu de capitais
+        menuCapitais.appendChild(itemCapital);
+    }
+}
+
+// Função para exibir os bairros correspondentes a uma capital
+function exibirBairros(capital) {
+    // Removendo a exibição de todos os submenus
+    const submenus = document.getElementsByClassName("submenuCidades");
+    for (let i = 0; i < submenus.length; i++) {
+        submenus[i].remove();
+    }
+    
+    // Criando o submenu para a capital clicada
+    const submenuCidades = document.createElement("ul");
+    submenuCidades.classList.add("submenuCidades");
+    
+    // Obtendo os bairros correspondentes à capital selecionada
+    const bairros = capitaisECidades[capital];
+    
+    // Adicionando itens de lista para cada bairro
+    bairros.forEach(bairro => {
+        const itemBairro = document.createElement("li");
+        itemBairro.textContent = bairro;
+        
+        // Adicionando um evento de clique para exibir o conteúdo do bairro
+        itemBairro.addEventListener("click", function() {
+            exibirConteudoBairro(bairro);
+            submenuCidades.style.display = "none"; // Oculta o submenu ao clicar em um bairro
+        });
+        
+        // Adicionando um evento de hover para destacar o item de bairro
+        itemBairro.addEventListener("mouseenter", function() {
+            itemBairro.style.backgroundColor = "#f0f0f0";
+        });
+        itemBairro.addEventListener("mouseleave", function() {
+            itemBairro.style.backgroundColor = "";
+        });
+        
+        // Adicionando o item de bairro ao submenu
+        submenuCidades.appendChild(itemBairro);
+    });
+    
+    // Posicionando o submenu abaixo do item de capital clicado
+    const itemCapital = document.querySelector(`#menuCapitais li:nth-child(${Object.keys(capitaisECidades).indexOf(capital) + 1})`);
+    submenuCidades.style.left = itemCapital.offsetLeft + "px";
+    submenuCidades.style.top = itemCapital.offsetTop + itemCapital.offsetHeight + "px";
+    
+    // Adicionando o submenu ao corpo do documento
+    document.body.appendChild(submenuCidades);
+    
+    // Exibindo o submenu
+    submenuCidades.style.display = "block";
+    
+    // Atualizando o título para SEO com as palavras-chave da cidade
+    const tituloSEO = document.getElementById("tituloSEO");
+    tituloSEO.textContent = `Área de Cobertura: ${capital}`;
+}
+
+// Função para exibir o conteúdo do bairro clicado
+function exibirConteudoBairro(bairro) {
+    const conteudoCidades = document.getElementById("conteudoCidades");
+    conteudoCidades.innerHTML = `
+        <h1>Moto Guincho no ${bairro}, em Ribeirão Preto – SP</h1>
+        <h2>Se você está procurando por Moto Guincho no ${bairro} em Ribeirão Preto – SP, temos a solução ideal pra você!</h2>
+        <h3>No ${bairro}, O Moto Guincho Ribeirão Preto se destaca por oferecer transporte de qualidade por um preço justo de verdade.</h3>
+        <h3>Nossa equipe está preparada para melhor atende-lo e tirar todas as suas duvidas, encontrando uma maneira de ajudar você.</h3>
+        <h3>Conte conosco para atender suas necessidades na hora de transportar a sua moto.</h3>
+    `;
+    // Adicionando o botão de CTA abaixo do texto
+    const ctaButton = document.createElement("a");
+    ctaButton.href = "https://api.whatsapp.com/send?phone=5511950266711";
+    ctaButton.textContent = "Entre em contato";
+    ctaButton.classList.add("cta-button");
+    conteudoCidades.appendChild(ctaButton);
+}
+
+// Função para rolar para o topo da página
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+function toggleSubtitulo(id) {
+    var elemento = document.getElementById(id);
+    if (elemento.style.display !== "none") {
+        elemento.style.display = "none";
+    } else {
+        elemento.style.display = "block";
+    }
+}
+
+// Chamando a função para criar o menu de capitais ao carregar a página
+window.onload = criarMenuCapitais;
+</script>
+<script>
+    function toggleSubtitulo(id) {
+        var subtitulo = document.getElementById(id);
+        if (subtitulo.style.display === "none") {
+            subtitulo.style.display = "block";
+        } else {
+            subtitulo.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Fale com a gente diretamente pelo WhatsApp.</p>
+            <p>E-mail: contato@motoguinchoribeirao.com.br</p>
+            <a href="#" class="cta-button">Entre em contato</a> <!-- Insira o link para a página de contato -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Moto Guincho Ribeirão. Todos os direitos reservados.</p>
+        <p>Desenvolvido por: <a href="https://wa.me/5516991981760">Julio Matheux</a></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank"><img src="https://i.ibb.co/syg02vZ/1.png" alt=""></a>
+            <a href="https://www.facebook.com/ContatoDesktop/" target="_blank"><img src="https://i.ibb.co/XLPD5sx/2.png" alt=""></a>
+            <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank"><img src="https://i.ibb.co/94vX1Qx/3.png" alt=""></a>
+        </div>
+                  
+
+    </footer>
+
+    <a href="https://wa.me/5511950266711" class="whatsapp-button"> <!-- Insira o link do seu WhatsApp aqui -->
+        <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp">
+    </a>
+
+</body>
+
+</html>
