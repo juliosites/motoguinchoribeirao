@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<!DOCTYPE html><html lang="pt-br"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                <title>Moto Guincho Ribeirão Preto - Serviço de Reboque de moto 24h</title>
@@ -9,9 +7,15 @@
     <meta name="robots" content="index, follow">
     <meta name="rating" content="general">
         
-    <link rel="icon" href="https://i.ibb.co/Chg4pg1/logo-site.png" type="image/x-icon">
+    <link rel="icon" href="images/logo-site.png" type="image/x-icon">
     <style>
         /* Adicione estilos CSS personalizados aqui */
+        .fullscreen-bg {
+    background-image: url('https://i.ibb.co/Y2FqLzC/Design-sem-nome-4.png'); /* Substitua 'https://caminho/para/sua/imagem.jpg' pela URL da sua imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra todo o tamanho da tela */
+    background-position: center; /* Centraliza a imagem */
+    height: 100vh; /* Define a altura igual à altura da tela */
+}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,7 +23,7 @@
         }
         header {
             background-color: #000000;
-            color: #000000;
+            color: #ffffff;
             padding: 10px 0; /* Ajusta o espaço interno do cabeçalho */
             display: flex;
             justify-content: space-between; /* Alinha os elementos ao redor */
@@ -132,7 +136,9 @@
             justify-content: center; /* Centraliza os itens horizontalmente */
         }
         .menu-item {
-            width: 20%; /* Define a largura dos itens para que haja 5 itens em cada linha */
+            width: 150px; /* Define a largura desejada para os botões */
+            display: inline-block; /* Exibe os botões como elementos em linha */
+            margin-right: 10px; /* Adiciona um espaçamento entre os botões */
             padding: 10px;
             box-sizing: border-box; /* Garante que o preenchimento não afete a largura real dos itens */
             background-color: #ffffff; /* Cor de fundo dos itens */
@@ -171,16 +177,39 @@
         .servico p {
             text-align: justify;
         }
+        /* Estilos dos serviços */
+        .servicos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .servico {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
+        }
+        .servico:hover {
+            transform: translateY(-10px); /* Move o elemento para cima ao passar o mouse */
+        }
+        .servico img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/Moto-Guincho-em-Ribeir%C3%A3o-Preto-Ligue.png" width="300" height="100" alt="Logo da Empresa" class="logo">
+    <img src="images/Moto-Guincho-em-Ribeir%C3%A3o-Preto-Ligue.png" width="300" height="100" alt="Logo da Empresa" class="logo">
     <div class="social-icons">
-        <a href="https://www.instagram.com/" target="_blank aria-label="Instagram><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/instagram-moto-guincho.png" width="75" height="75"alt="Ícone do Instagram"></a>
-        <a href="https://www.facebook.com/ContatoDesktop/" target="_blank aria-label="Facebook><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/facebook-moto-guincho.png" width="75" height="75" alt="Ícone do Facebook"></a>
-        <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank aria-label="You Tube><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/youtube-moto-guincho.png" width="75" height="75"alt="Ícone do You Tube"></a>
+        <a href="https://www.instagram.com/" target="_blank aria-label=" instagram=""><img src="images/instagram-moto-guincho.png" width="75" height="75" alt="Ícone do Instagram"></a>
+        <a href="https://www.facebook.com/ContatoDesktop/" target="_blank aria-label=" facebook=""><img src="images/facebook-moto-guincho.png" width="75" height="75" alt="Ícone do Facebook"></a>
+        <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank aria-label=" you="" tube=""><img src="images/youtube-moto-guincho.png" width="75" height="75" alt="Ícone do You Tube"></a>
     </div>
     <nav>
         <a href="#home">Home</a>
@@ -191,8 +220,8 @@
     </nav>
 </header>
 
-<section id="home">
-    <div class="container">
+<section id="home" style="position: relative;">
+    <div class="container" style="position: relative; z-index: 1;">
         <h1>Moto Guincho em Ribeirão Preto</h1>
         <h2>Atendimento exclusivo em moto guincho e transporte de Motocicletas. Atuamos com socorro de motos em geral.</h2>
         <h3>Em situações de emergência ou pane, nossa equipe de socorro está disponível 24 horas para atender chamados em Ribeirão Preto.</h3>
@@ -204,6 +233,7 @@
         <p>Seja em uma emergência na estrada ou simplesmente movendo seu veículo de um local para outro, confie na <strong>Assistência Moto Guincho Ribeirão</strong> para fornecer soluções rápidas e confiáveis.</p>
         <button onclick="window.location.href='https://wa.me/5511950266711'">Entrar em Contato</button>
     </div>
+    <div class="fullscreen-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
 </section>
 
 <section id="servicos">
@@ -211,7 +241,7 @@
         <h2>Nossos Serviços</h2>
         <div class="servicos">
             <div class="servico">
-                <img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/moto-guincho-ribeirao.png" width="100" height="100" alt="Serviço 1">
+                <img src="images/moto-guincho-ribeirao.png" width="100" height="100" alt="Serviço 1">
                 <div>
                     <h3>Moto Guincho em Ribeirão Preto</h3>
                     <p>Esta sempre a disposição para lhe oferecer socorro de motos na cidade de Ribeirão Preto. Sempre que precisar de moto guincho fale com a gente! </p>
@@ -219,13 +249,20 @@
                 </div>
             </div>
             <div class="servico">
-                <img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/moto-guincho-ribeirao.png" width="100" height="100" alt="Serviço 2">
+                <img src="images/moto-guincho-ribeirao.png" width="100" height="100" alt="Serviço 2">
                 <div>
                     <h3>Transporte de Motociletas em Ribeirã Preto</h3>
                     <p>Leve a sua moto através de um agendamento combinado de um local para outro de forma rápida e segura. A Moto Guincho Ribeirão esta sempre a sua disposição.</p>
                     <button onclick="window.location.href='https://wa.me/5511950266711'">WhatsApp</button>
                 </div>
             </div>
+            <div class="servico">
+                <img src="images/moto-guincho-ribeirao.png" width="100" height="100" alt="Serviço 2">
+                <div>
+                    <h3>Leve a sua moto em Ribeirã Preto</h3>
+                    <p>Faça um agendamento combinado de um local para outro. A Moto Guincho Ribeirão esta sempre atenta para lhe servir.</p>
+                    <button onclick="window.location.href='https://wa.me/5511950266711'">WhatsApp</button>
+                </div>
         </div>
     </div>
 </section>
@@ -235,7 +272,7 @@
         <h2>Por que Escolher Moto Guincho Ribeirão?</h2>
                 
                     <h3>Serviço de Moto Guincho Profissional</h3>
-                    <p>A Moto Guincho Ribeirão oferece serviços de moto guincho profissionais e confiáveis para atender às suas necessidades de transporte de motocicletas. Nossa equipe especializada garante que seu veículo seja transportado com segurança e cuidado, proporcionando tranquilidade em momentos de necessidade.</p>
+                    <p>A Moto Guincho Ribeirão oferece serviços de moto guincho profissionais e confiáveis para atender �&nbsp;s suas necessidades de transporte de motocicletas. Nossa equipe especializada garante que seu veículo seja transportado com segurança e cuidado, proporcionando tranquilidade em momentos de necessidade.</p>
                     
                     <h3>Atendimento Ágil e Eficiente</h3>
                     <p>Nossa prioridade é fornecer um atendimento ágil e eficiente para nossos clientes. Com uma equipe dedicada e equipamentos modernos, estamos sempre prontos para responder rapidamente a chamados de emergência e fornecer soluções imediatas para suas necessidades de guincho.</p>
@@ -252,11 +289,11 @@
                     <button onclick="window.location.href='https://wa.me/5511950266711'">Chamar Moto Guincho</button>
 
                 </div>
-            </div>
+            
         </section>
         
-    </div>
-</section>
+    
+
 
 <section id="area-cobertura">
     <div class="container">
@@ -289,7 +326,7 @@
         <div class="menu-item">
             <a href="Bonfin-Paulista.html" target="_blank">Bonfim Paulista</a>
         </div>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1376310795845!2d-47.79924212491455!3d-21.186690880502407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bf2264c2a969%3A0x8718fbc1746c4435!2sR.%20Regina%20-%20Ribeir%C3%A3o%20Preto%2C%20SP%2C%2014091-120!5e0!3m2!1spt-BR!2sbr!4v1709883978274!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- Adicione os outros botões de bairro da mesma maneira -->
         
         <!-- Textos dos Bairros -->
@@ -354,34 +391,34 @@
         
                 <button onclick="window.location.href='https://wa.me/5511950266711'">Chamar Moto Guincho</button></div>
             
-        </div>
-    </div>
+        
+    
 </section>
 
 <section id="contato">
     <div class="container">
         <h2>Entre em Contato</h2>
-        contato@motoguinchoribeirao.com.br
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f3c30312b3e2b301f32302b30382a36313c37302d363d3a362d3e30713c3032713d2d">[email�&nbsp;protected]</a>
         Telefone: (11) 95026-6711 Ribeirão Preto -SP
         <!-- Adicione informações de contato aqui -->
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Moto Guincho Ribeirão. Todos os direitos reservados.</p>
+    <p>© 2024 Moto Guincho Ribeirão. Todos os direitos reservados.</p>
     <p>Desenvolvido por: <a href="https://wa.me/5516991981760">Julio Matheux</a></p>
     <div class="social-icons">
-        <a href="https://www.instagram.com/" target="_blank aria-label="Instagram><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/instagram-moto-guincho.png" width="75" height="75"alt="Ícone do Instagram"></a>
-        <a href="https://www.facebook.com/ContatoDesktop/" target="_blank aria-label="Facebook><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/facebook-moto-guincho.png" width="75" height="75" alt="Ícone do Facebook"></a>
-        <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank aria-label="You Tube><img src="https://raw.githubusercontent.com/juliosites/motoguinchoribeirao/main/youtube-moto-guincho.png" width="75" height="75"alt="Ícone do You Tube"></a>
+        <a href="https://www.instagram.com/" target="_blank aria-label=" instagram=""><img src="images/instagram-moto-guincho.png" width="75" height="75" alt="Ícone do Instagram"></a>
+        <a href="https://www.facebook.com/ContatoDesktop/" target="_blank aria-label=" facebook=""><img src="images/facebook-moto-guincho.png" width="75" height="75" alt="Ícone do Facebook"></a>
+        <a href="https://www.youtube.com/@QuangNguyen-qk6de" target="_blank aria-label=" you="" tube=""><img src="images/youtube-moto-guincho.png" width="75" height="75" alt="Ícone do You Tube"></a>
     </div>
 </footer>
 
 <a href="https://wa.me/5511950266711" class="whatsapp-button" target="_blank">
-    <img src="https://github.com/juliosites/motoguinchoribeirao/blob/main/whatsapp-moto-socorro-ribeirao%20(1).png?raw=true" width="90" height="90" alt="Falar no WhatsApp">
+    <img src="images/whatsapp-moto-socorro-ribeirao%20%281%29.png" width="90" height="90" alt="Falar no WhatsApp">
 </a>
 
-<script>
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script>
     // Função para adicionar bairros à área de cobertura
     function adicionarBairro(nomeBairro, texto) {
         var menuCobertura = document.getElementById("menu-cobertura");
@@ -418,5 +455,6 @@
  
 </script>
 
-</body>
-</html>
+
+
+</body></html>
